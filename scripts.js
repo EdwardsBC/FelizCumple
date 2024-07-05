@@ -15,17 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let currentIndex = 0;
     const noteTarget = document.getElementById('noteTarget');
-    const leftArrow = document.getElementById('leftArrow');
     const rightArrow = document.getElementById('rightArrow');
 
     const updatePhrase = (index) => {
         noteTarget.textContent = phrases[index];
     };
-
-    leftArrow.addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + phrases.length) % phrases.length;
-        updatePhrase(currentIndex);
-    });
 
     rightArrow.addEventListener('click', () => {
         currentIndex = (currentIndex + 1) % phrases.length;
