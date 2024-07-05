@@ -1,0 +1,186 @@
+html {
+    width: 100%;
+    height: 100%;
+    background-color: #EDD8C6;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Indie Flower', cursive;
+}
+
+#wrapper {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#displayTitle {
+    font-size: 80px;
+    text-align: center;
+}
+
+#displayTitle:hover {
+    cursor: default;
+}
+
+#displayImg {
+    height: 40%;
+    opacity: 1;
+    animation: fadeIn 2s;
+}
+
+#displayImg:hover {
+    cursor: pointer;
+}
+
+#msgContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 20%;
+    margin: 20px 0;
+    border-bottom: black 1px solid;
+    border-top: black 1px solid;
+}
+
+.arrow {
+    font-size: 50px;
+    transition: 0.1s;
+}
+
+.arrow:hover {
+    cursor: pointer;
+}
+
+#leftArrow {
+    transform: scaleX(-1);
+}
+
+#leftArrow:active, #rightArrow:active {
+    transform: scale(1.1);
+}
+
+#noteTarget {
+    font-size: 30px;
+    padding: 0 20px;
+}
+
+#noteTarget:hover {
+    cursor: pointer;
+}
+
+iframe {
+    margin-top: 20px;
+    animation: fadeIn2 2s;
+}
+
+#liveTimer {
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.doNotSelect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+/* ==== Mobile Styles ====*/
+
+@media only screen and (max-width: 600px) {
+    .arrow {
+        font-size: 30px;
+    }
+
+    #displayTitle {
+        font-size: 50px;
+        margin-top: 10px;
+    }
+
+    #msgContainer {
+        width: 95%;
+    }
+
+    #noteTarget {
+        font-size: 20px;
+    }
+
+    iframe {
+        width: 250px;
+        height: 300px;
+    }
+
+    #liveTimer {
+        font-size: 14px;
+    }
+}
+
+/* ==== Tablet Styles ====*/
+
+@media only screen and (max-width: 1000px) and (min-width: 600px) {
+    .arrow {
+        font-size: 40px;
+    }
+
+    #displayTitle {
+        font-size: 50px;
+        margin-top: 10px;
+    }
+
+    #msgContainer {
+        width: 80%;
+    }
+
+    #noteTarget {
+        font-size: 25px;
+    }
+
+    iframe {
+        width: 275px;
+        height: 330px;
+    }
+
+    #liveTimer {
+        font-size: 16px;
+    }
+}
+
+/* ==== Animations ====*/
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn2 {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
